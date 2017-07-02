@@ -13,7 +13,7 @@
         padding: 50px;
         background-color: #EEE;
       }
-      .letter{
+      /*.letter{
         padding: 10px;
         margin: 10px;
         background-color: #FFDE00;
@@ -21,7 +21,7 @@
         display: inline-block;
         font-size: 32px;
         text-align: center;
-      }
+      }*/
     </style>
 
   </head>
@@ -34,8 +34,19 @@
 
       var Letter = React.createClass({
         render: function() {
+          var letterStyle = {
+            padding: "10px",
+            margin: "10px",
+            backgroundColor: this.props.bgcolor,
+            color: "#333",
+            display: "inline-block",
+            fontFamily: "monospace",
+            fontSize: "32px",
+            textAlign: "center"
+          };
+
           return(
-            <div className="letter">
+            <div style={letterStyle}>
               {this.props.children}
             </div>
           );
@@ -46,10 +57,10 @@
 
       ReactDOM.render(
         <div>
-          <Letter>A</Letter>
-          <Letter>B</Letter>
-          <Letter>C</Letter>
-          <Letter>D</Letter>
+          <Letter bgcolor="#58B3FF">A</Letter>
+          <Letter bgcolor="#FF605F">B</Letter>
+          <Letter bgcolor="#FFD52E">C</Letter>
+          <Letter bgcolor="#AE99FF">D</Letter>
         </div>,
         destination
       );
