@@ -28,17 +28,19 @@
 
     <script type="text/babel">
 
-      var HelloWorld = React.createClass({
+      var Buttonify = React.createClass({
         render: function() {
-          return (
-            <p>Hello, world!</p>
+          return(
+            <div>
+              <button type={this.props.behavior}>{this.props.children}</button>
+            </div>
           );
         }
       });
 
       ReactDOM.render(
         <div>
-          <HelloWorld/>
+          <Buttonify behavior="Submit">SEND MORE DATA</Buttonify>
         </div>,
         document.querySelector("#container")
       );
