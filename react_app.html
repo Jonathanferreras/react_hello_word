@@ -13,13 +13,13 @@
         padding: 50px;
         background-color: #EEE;
       }
-      #container h1{
+      #container p{
         font-size: 48px;
         font-family: sans-serif;
         color: #0080A8;
       }
     </style>
-    
+
   </head>
   <body>
     <div id="container">
@@ -27,10 +27,22 @@
     </div>
 
     <script type="text/babel">
+
+      var HelloWorld = React.createClass({
+        render: function() {
+          return (
+            <p>Hello, world!</p>
+          );
+        }
+      });
+
       ReactDOM.render(
-        <h1>Sherlock Holmes</h1>,
+        <div>
+          <HelloWorld/>
+        </div>,
         document.querySelector("#container")
       );
     </script>
+
   </body>
 </html>
